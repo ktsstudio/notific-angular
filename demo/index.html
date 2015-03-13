@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>Notific demo</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/notific.min.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body ng-app="demoApp">
+	<header class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<a href="#" class="navbar-brand">
+					Notific demo
+				</a>
+			</div>
+		</div>
+	</header>
+	<div class="container" ng-controller="MainCtrl">
+		<div class="row">
+			<div class="col-sm-9">
+				<h1>Демонстрация notific.js</h1>
+                <button class="btn btn-primary" ng-click="notify()">Простое уведомление</button>
+                <button class="btn btn-danger" ng-click="notify('error')">Ошибка</button>
+                <button class="btn btn-success" ng-click="notify('success')">Успешно</button>
+				<button class="btn btn-warning" ng-click="notify('warning')">Предупреждение</button>
+			</div>
+		</div>
+	</div>
+
+    <notifications></notifications>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+    <script src="js/lib/notific.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

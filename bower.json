@@ -1,0 +1,26 @@
+{
+  "name": "notific-angular",
+  "version": "0.0.1",
+  "authors": [
+    "George Biryukov <george@biryukov.ws>"
+  ],
+  "description": "Extremely simple angular module for notifications",
+  "main": [
+    "dist/notific.js",
+    "dist/notific.css"
+  ],
+  "keywords": [
+    "notific",
+    "angular",
+    "notification"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/gbiryukov/notific-angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
