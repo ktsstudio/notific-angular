@@ -1,5 +1,5 @@
 /*! 
-* notific - v0.0.1 - 2015-03-13
+* notific - v0.0.2 - 2015-11-20
 * https://github.com/gbiryukov/notific-angular
 * Copyright (c) 2015 George Biryukov
 * Licensed MIT 
@@ -51,8 +51,10 @@ angular.module('notific', [])
                 }
             },
             _scrollToBottom: function () {
-                var container = this._container[0];
-                container.scrollTop = container.scrollHeight;
+                var container = document.getElementById('notific');
+                if (container) {
+                    container.scrollTop = container.scrollHeight;
+                }
             },
             _styleBootstrap: function () {
                 this.config({
@@ -113,9 +115,6 @@ angular.module('notific', [])
                 this._scope = scope;
                 this.config({});
             },
-            _setContainer: function(el){
-                this._container = el;
-            },
             error: function (opts) {
                 return this.show(this._extendDeep(opts, {type: 'error'}));
             },
@@ -154,7 +153,6 @@ angular.module('notific', [])
         compile: function CompilingFunction() {
 
             //$templateElement.replaceWith(this.template);
-            var el = angular.element(document.getElementById('notific'));
 
             return function LinkingFunction(scope) {
                 scope.notifications = [];
@@ -183,7 +181,6 @@ angular.module('notific', [])
                     notific._scrollToBottom();
                 });
 
-                notific._setContainer(el);
                 notific._setContainerScope(scope);
             };
         }

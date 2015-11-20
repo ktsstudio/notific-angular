@@ -1,6 +1,6 @@
 {
   "name": "notific-angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Extremely simple amd module for notifications in angularJS",
   "keywords": [
     "notific",
